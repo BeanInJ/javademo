@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f6792d75-a5ee-443c-be9c-dbe2e87ede82" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../java/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="F:\java\apache-maven-3.6.3\conf\settings-1111.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mMu7gvMgTKh5OzJhVZWsstrbiA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\es-jingdong\src\main\resources\templates" />
+      <recent name="F:\es-jingdong\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="HtmlUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.beaninj.demo.util.HtmlUtil" />
+      <module name="es-jingdong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beaninj.demo.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="es-jingdong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beaninj.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.beaninj.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.beaninj.demo.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTests.craatIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="es-jingdong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beaninj.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.beaninj.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.beaninj.demo.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="craatIndex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplicationTests.testBuliEs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="es-jingdong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beaninj.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.beaninj.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.beaninj.demo.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="testBuliEs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="es-jingdong" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.beaninj.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DemoApplicationTests.testBuliEs" />
+        <item itemvalue="JUnit.DemoApplicationTests.craatIndex" />
+        <item itemvalue="JUnit.DemoApplicationTests.contextLoads" />
+        <item itemvalue="Application.HtmlUtil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6792d75-a5ee-443c-be9c-dbe2e87ede82" name="Default Changelist" comment="" />
+      <created>1609315615961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609315615961</updated>
+      <workItem from="1609315619593" duration="9705000" />
+      <workItem from="1609377412995" duration="18429000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1557" height="2" key="GridCell.Tab.0.bottom" timestamp="1609400904956">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="2" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609400904956" />
+    <state width="1557" height="2" key="GridCell.Tab.0.center" timestamp="1609400904956">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="2" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1609400904956" />
+    <state width="1557" height="2" key="GridCell.Tab.0.left" timestamp="1609400904956">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="2" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1609400904956" />
+    <state width="1557" height="2" key="GridCell.Tab.0.right" timestamp="1609400904956">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="2" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1609400904956" />
+    <state width="1557" height="2" key="GridCell.Tab.1.bottom" timestamp="1609400904956">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="2" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609400904956" />
+    <state width="1557" height="2" key="GridCell.Tab.1.center" timestamp="1609400904956">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="2" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1609400904956" />
+    <state width="1557" height="2" key="GridCell.Tab.1.left" timestamp="1609400904956">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="2" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1609400904956" />
+    <state width="1557" height="2" key="GridCell.Tab.1.right" timestamp="1609400904956">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="2" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1609400904956" />
+    <state x="476" y="163" width="647" height="534" key="find.popup" timestamp="1609332941560">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="476" y="163" width="647" height="534" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1609332941560" />
+    <state x="227" y="183" width="888" height="598" key="new project wizard" timestamp="1609329076075">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="227" y="183" width="888" height="598" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1609329076075" />
+  </component>
+</project>
