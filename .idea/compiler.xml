@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_shiro" />
+        <module name="springboot_jwt" />
         <module name="demo" />
         <module name="springboot_shiro_thymeleaf" />
       </profile>
@@ -15,6 +16,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
+      <module name="springboot_jwt" options="-parameters" />
       <module name="springboot_shiro" options="-parameters" />
       <module name="springboot_shiro_thymeleaf" options="-parameters" />
     </option>

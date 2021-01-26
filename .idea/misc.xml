@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_shiro_thymeleaf/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_jwt/pom.xml" />
       </list>
     </option>
   </component>
