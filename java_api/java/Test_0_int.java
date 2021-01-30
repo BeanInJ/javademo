@@ -18,7 +18,7 @@ public class Test_0_int {
         int i1 = Byte.MAX_VALUE;
         double i2 = Double.MIN_VALUE;
 
-        // 装箱、拆箱（基本类型和包装类型的转换）
+        // 装箱、拆箱（基本类型和包装类型的转换）,我们常用的是自动拆箱、装箱的方式
         Integer i3 = 2;                       // 自动装箱
         Integer i4 = new Integer(2);    // 装箱 方式1
         Integer i5 = Integer.valueOf(2);      // 装箱 方式2
@@ -31,5 +31,14 @@ public class Test_0_int {
         ArrayList<Integer> l = new ArrayList<>();
         l.add(5);                              // 自动装箱
         int i9 = l.get(0);                     // 自动拆箱
+
+        // 基本类型与String之间的转换
+        // 1、基本类型转String  （三种方式）
+        String s1 = 100 + "";
+        String s2 = Double.toString(0.333);
+        String s3 = String.valueOf(1.1);
+        // 2、String转基本类型    注意：被转换的字符串内容，要符合转出去对应的基本类型，比如“a”不能转为int
+        int i01 = Integer.parseInt("11");
+        long l01 = Long.parseLong("202016666");
     }
 }
