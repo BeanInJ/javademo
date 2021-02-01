@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
 
 public class Test_0_int {
     public static void main(String[] args) {
