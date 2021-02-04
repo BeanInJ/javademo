@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/javademo.iml" filepath="$PROJECT_DIR$/javademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_rocketmq/springboot_rocketmq.iml" filepath="$PROJECT_DIR$/springboot_rocketmq/springboot_rocketmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_shiro/springboot_shiro.iml" filepath="$PROJECT_DIR$/springboot_shiro/springboot_shiro.iml" />
     </modules>
   </component>
