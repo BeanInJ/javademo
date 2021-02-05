@@ -1,4 +1,4 @@
-package com.beaninj.springboot_rocketmq.procucer;
+package com.beaninj.springboot_rocketmq.msgSync.procucer;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendCallback;

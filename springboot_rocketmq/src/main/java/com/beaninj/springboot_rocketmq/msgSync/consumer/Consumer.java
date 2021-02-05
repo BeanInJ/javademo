@@ -1,4 +1,4 @@
-package com.beaninj.springboot_rocketmq.consumer;
+package com.beaninj.springboot_rocketmq.msgSync.consumer;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
