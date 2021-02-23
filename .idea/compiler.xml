@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_rocketmq" />
+        <module name="spring_code" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="javademo" target="8" />
+      <module name="spring_code" target="8" />
       <module name="springboot_rocketmq" target="1.8" />
       <module name="springboot_shiro" target="1.5" />
     </bytecodeTargetLevel>

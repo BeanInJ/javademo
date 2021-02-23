@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java_socket/java_socket.iml" filepath="$PROJECT_DIR$/java_socket/java_socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/javademo.iml" filepath="$PROJECT_DIR$/javademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_code/spring_code.iml" filepath="$PROJECT_DIR$/spring_code/spring_code.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_rocketmq/springboot_rocketmq.iml" filepath="$PROJECT_DIR$/springboot_rocketmq/springboot_rocketmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_shiro/springboot_shiro.iml" filepath="$PROJECT_DIR$/springboot_shiro/springboot_shiro.iml" />
     </modules>
