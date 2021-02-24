@@ -1,0 +1,87 @@
+1、String能被继承吗？
+不能，因为String类有final修饰符，不能被继承。
+
+2、String str=”abc”、String str=new String(“abc”)是有区别的
+前者：存储”abc”前，会先去方法区里的常量池找是否已经存在，有直接引用，没有就创建。
+后者：先在堆里创建一个String对象，再通过这个对象去方法区里的常量池找是否已经存在，有直接引用，没有就创建。
+所以为了减小内存开销尽量不要使用new String()。
+
+3、String， StringBuffer， StringBuilder 的区别
+String是常量，不可修改
+StringBuffer是字符串变量，可修改，线程安全，不可继承，其toString方法会进行对象缓存
+StringBuilder是字符串变量，可修改，线程非安全，其toString会返回一个新的对象
+
+4、ArrayList和LinkedList有什么区别
+ArrayList: 底层是数组，基于索引的数据接口，查询速度快
+LinkedList：底层是列表，插入、添加、删除速度快，更占内存
+
+5、实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，当 new 的时候， 他们的执行顺序。
+父类静态变量、父类静态代码块
+子类静态变量、子类静态代码块
+父类非静态变量、父类构造函数
+子类非静态变量、子类构造函数
+
+6、map类有哪些？区别
+HashMap、TreeMap、LinkedHashMap
+HashMap=数组+链表+红黑树，是线程不安全的，采用哈希表存储。
+TreeMap是有序的，默认升序
+LinkedHashMap是有序的，会记录插入顺序
+
+7、抽象类和接口的区别
+①、抽象类和接口不能直接实例化，如果要实例化，抽象类变量要指向实现抽象方法的子类对象，接口变量要指向实现类。
+②、接口只能做方法声明，抽象类可以有实现方法、也可以有抽象方法。
+③、接口里的变量只能是公共的静态常量，抽象类的变量是普通变量。
+④、抽象类的抽象方法必须全部被子类实现（子类也是抽象类除外），接口的实现类，必须全部实现接口方法（抽象类除外）。
+⑤、接口可以多继承，类只能但继承。
+
+8、关于抽象方法
+①、抽象类里面可以没有抽象方法
+②、抽象方法只能写成abstract void abc();不能写成abstract void abc(){}。
+③、抽象方法只能在抽象类里
+
+9、nio和bio的区别
+IO（BIO）是面向流的，NIO是面向缓冲区的
+bio是同步阻塞的，方便，但处理并发能力低。
+nio是同步非阻塞的，可以实现多路复用。
+aio是nio的升级，也叫nio2，异步非阻塞，异步io的操作基于事件和回调机制。
+
+10、java的反射机制
+反射：动态调取一个类的属性和方法
+应用：生成动态代理、面向切面编程
+
+三种获取字节码的方式：假设现在有一个类A
+① Class c1 = A.class
+② A a = new A();    Class c2 = a.getClass();
+③ Class c3 = Class.forName("com.example.A")
+
+获取类 无参构造器       c = clazz.getDeclaredConstructor();
+通过字节码new一个对象   A a1 = (A) c.newInstance();                  无参构造器new也可以这样 ： A a1 = (A) clazz.newInstance();
+
+获取类 有参构造器       c = clazz.getDeclaredConstructor(int.class,String.class);
+通过字节码new一个对象   A a2 = (A) c.newInstance(1,"haha");
+
+获取所有的构造器        Constructor[] cs = clazz.getDeclaredConstructors();
+
+获取构造器名字          c.getName()
+获取参数列表            Arrays.toSting(c.getParameters())
+获取修饰符(数字)        c.getModifiers()
+获取修饰符(名字)        Modifier.toString(c.getModifiers())
+
+强制访问类里的私有方法加一句    c.setAccessible(true)
+
+反射字段name           Filed name = clazz.getDeclareField("name");
+字段赋值                  name.set(a1,"zhang")
+获取字段值             name.get(a1)
+获取静态字段值          name.get(null)
+获取字段名字           name.getName()
+私有字段加一句          name.setAccessible(true);
+
+反射方法              Method eat = clazz.getDeclareMethod("eat");
+                     Method eat = clazz.getDeclareMethod("eat",String.class);
+调用方法              eat.invoke(a1);
+                     eat.invoke(a1,"鸡腿");
+调用静态方法           eat.invoke(null);
+私有方法加一句          eat.setAccessible(true);
+
+反射所有方法           Method[] ms = clazz.getMethods();
+

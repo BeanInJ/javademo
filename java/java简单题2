@@ -1,0 +1,112 @@
+1、Class.forName 和 ClassLoader的区别？
+Class.forName和ClassLoader都可以加载类
+ClassLoader就是遵循双亲委派模型最终调用启动类加载器的类加载器
+ClassLoader.getSystemClassLoader().loadClass("com.example.A");
+Class.forName()方法实际上是调用的ClassLoader来实现的
+例：Class.forName("com.example.A");
+
+2、动态代理的几种实现方式
+JDK、cglib
+
+jdk：利用反射机制，基于接口实现
+cglib：基于asm，实现了无反射机制，利用空间换取时间，代理效率高于jdk
+
+
+3、三种单例模式实现
+
+饿汉式
+/**
+ *  单例模式：饿汉式
+ *  在类加载时就创建单例对象
+ *  执行效率高，但是占空间，以空间换时间，线程安全
+ */
+ public class Hungry{
+    private static final Hungry hungry = new Hungry();
+    private Hungry(){}
+    public static Hungry getInstance(){ return hungry }
+ }
+
+懒汉式,第一种双重判断
+/**
+ * 对象使用的时候在，才去创建
+ * 有线程安全的风险，需要加锁
+ */
+public class Lazy1{
+    private Lazy1(){}
+    private static Lazy1 instance = null;
+    public static Lazy1 getInstance(){
+        if(instance == null){
+            synchronized (Lazy1.class){
+                if(instance == null){
+                    instance = new Lazy1();
+                }
+            }
+        }
+        return instance;
+    }
+}
+
+懒汉式,第二种静态内部类
+/**
+ * 静态内部类在使用时才加载
+ * 此模式既是懒加载，又没有加锁影响性能
+ */
+public class Lazy2{
+    private Lazy2(){}
+    public static final Lazy2 getInstance(){
+        return LazyLoad.instance;
+    }
+    private static class LazyLoad{
+        private static final Lazy2 instance = new Lazy2();
+    }
+}
+
+懒汉式的变种，注册式
+/**
+ * spring IOC容器就是使用的这种注册式的单例模式
+ */
+public class BeanFactory{
+    public static Map<String,Object> ioc = new ConcurrentHashMap<String,Object>();
+    public static Object getBean(String className){
+        if(!ioc.containsKey(className)){
+            try{
+                Object instance = Class.forName(className).newInstance();
+                ioc.put(className,instance);
+                return instance;
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        return ioc.get(className);
+    }
+}
+
+4、深浅拷贝的区别
+深拷贝：把里面的内容都拷贝一遍
+浅拷贝：只复制引用，里层的对象修改，当前的对象也会修改
+
+5、数组和链表数据结构
+数组：是将元素在内存中连续存放，增/删一个元素，需将大量元素移动，查询快
+链表：链表中的元素不是连续存放的，是通过指针联系到一起，增/删一个元素快，查询慢
+数组元素在栈区，链表元素在堆区
+
+6、堆中存什么？栈中存什么？
+栈：解决的是运行问题，即程序如何运行、如何处理数据。
+堆：解决的是存储问题，即数据怎么放、放在哪儿。
+
+栈：（小）存的是基本数据类型、对象的引用。栈中一个引用占4btye。
+堆：（大）存的是对象。一个对象的大小是变化的。
+
+数组利用下标定位，时间复杂度为O(1)，链表定位元素时间复杂度O(n)；
+数组插入或删除元素的时间复杂度O(n)，链表的时间复杂度O(1)。
+
+7、Error和Exception的区别
+error和exception都继承自Throwable
+exception下面还有CheckedException（编译时异常）和RuntimeException（运行时异常）两个子类
+
+Error 错误，一般是不可控的、系统错误、底层资源错误，比较严重，程序对其不做处理，程序可能会终止。
+Exception 异常，可控或不可控的、程序员代码错误，设计或实现问题，程序可能会继续运行。
+
+8、运行时异常RuntimeException和编译时异常CheckedException的区别
+运行时异常：程序运行后会出现的异常，例如空指针异常、运算错误、程序bug
+编译时异常：一般编程工具会提示
