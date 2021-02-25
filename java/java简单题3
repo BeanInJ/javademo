@@ -1,0 +1,19 @@
+1、JVM的内存结构
+jvm运行时数据区主要包括：堆、栈、方法区、程序计数器等
+jvm的优化问题主要在线程共享的数据区中的：堆、方法区
+
+2、tomcat 如何调优，涉及哪些参数
+内存调优：主要对tomcat启动参数进行优化，可以修改它的最大内存数等
+线程数优化：tomcat的并发连接参数，主要在tomcat配置文件中的server.xml中配置，比如修改最小空闲连接线程数，用于提高系统性能等
+优化缓存：打开压缩功能，修改参数，比如压缩的输出内容大小默认为2KB，可以适当修改
+
+3、Spring加载流程
+通过listener入口，核心是在AbstractApplicationContext的refresh方法，在此处进行装载bean工厂，创建bean实例，拦截器，后置处理器等。
+
+4、Spring事务传播属性
+所谓事务传播行为是指，如果在开始当前事务前，一个事务上下文已经存在，此时有若干选项可以指定一个事务性方法的执行行为。
+在TransactionDefinition定义中包括了如下几个表示传播行为的常量：
+①TransactionDefinition.PROPAGATION_REQUIRED:如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务。
+②TransactionDefinition.PROPAGATION_REQUIRES_NEW:创建一个新的事务，如果当前存在事务，则把当前事务挂起。
+③TransactionDefinition.PROPAGATION_SUPPORTS:如果当前存在事务，则加入该事务；如果没有当前事务，则以非事务方式继续运行。
+④TransactionDefinition.PROPAGATION_NOT_SUPPORTED:以非事务方式运行，如果当前存在事务，则把当前事务挂起。

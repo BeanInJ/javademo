@@ -110,3 +110,119 @@ Exception 异常，可控或不可控的、程序员代码错误，设计或实�
 8、运行时异常RuntimeException和编译时异常CheckedException的区别
 运行时异常：程序运行后会出现的异常，例如空指针异常、运算错误、程序bug
 编译时异常：一般编程工具会提示
+
+9、在覆盖equals方法的时候，必须要遵守它的通用约定
+下列约定前提是变量都不为null
+自反性，x.equals(x)必须返回true
+对称性，x.equals(y)返回true，y.equal(x)就必须返回true
+传递性，x.equals(y)返回true，y.equals(z)返回true，则x.equals(z)必须返回true
+一致性，多次调用x.equals(y)一直返回true
+
+10、实现高质量equals方法
+①使用==符号检查“参数是否为这个对象的引用”，如果是返回true。（如果用比较操作，比较昂贵）
+②使用instanceof操作符检查“参数是否为正确的类型”，如果不是则返回false。所谓“正确的类型”是指equals方法所在的那个类
+③把参数转换为正确的类型，因为转换之前进行过instanceof测试，所以确保会成功
+④对于该类中的每个“关键”域，检查参数中的域是否与该对象中对应的域相匹配，如果这些测试全部成功，则返回true。
+⑤当编写完成了equals方法之后，检查“对称性”、“传递性”、“一致性”
+
+注意：覆盖equals时总要覆盖hashCode，
+如果不这样就会违反hashCode的通用约定，从而导致该类无法结合所有基于散列的集合一起正常运作，
+这样的集合包括HashMap、HashSet、Hashtable。
+
+11、请结合oo设计理念，谈谈访问修饰符public、private、protected、default在应用中的作用
+修饰符的主要作用是隔离防护。分别有公共、包与包之间的隔离、包内访问、继承可访问、仅类内访问
+
+12、列出五个运行时异常
+NullPointerException 空指针异常
+ClassCastException   类型转换异常
+ClassNotFoundException 找不到指定类异常
+NumberFormatException  字符串转换数字异常
+NoSuchMethodException  方法不存在异常
+
+13、jvm和类的关系
+当一个java程序运行时，必有一个jvm启动（java虚拟机）
+该java程序的所有线程、变量，都处于jvm中
+
+14、equals与hashcode的关系
+equals相等的两个对象，hashcode一定相等
+但是hashcode相等的两个对象，equals不一定相等
+
+15、HashSet的实现原理
+hashset是基于hashmap实现的，它底层采用hashmap来保存元素。
+
+16、HashMap的实现原理
+hashmap是基于哈希表的map接口的非同步实现的，是一个数组+链表的结合体。
+
+17、写出效率高的一种HashMap的遍历方式
+Map map = new HashMap()
+Iterator iter = map.entrySet().iterator();
+while(iter.hasNext()){
+    Map.Entry entry = (Map.Entry) iter.next();
+    Object key = entry.getKey();
+    Object val = entry.getValue();
+    }
+
+hashmap、hashset等的实现原理参考：https://wiki.jikexueyuan.com/project/java-collection/hashmap.html
+
+18、JDK和JRE有什么区别
+JDK：java开发工具包，提供了java的开发环境和运行环境
+JRE：java运行环境，jdk包含了jre
+
+19、String类常用的方法都有哪些?
+indexOf():返回指定字符的索引
+charAt():返回索引对应的字符
+replace():字符串替换
+trim():去除字符串两端空白
+split():分割字符串，返回数组
+getBytes():返回字符串的byte类型数组
+length():返回字符串长度
+toLowerCase():将字符串转成小写
+toUpperCase()：将字符串转成大写
+subString():截取字符串
+equals():字符串比较
+
+20、Files常用方法有哪些
+File.exists():     检测文件路径是否存在
+File.createFile(): 创建文件
+File.createDirectory():创建文件夹
+File.delete():删除一个文件或目录
+File.copy():复制文件
+File.move():移动文件
+File.size():查看文件个数
+File.read():读取文件
+File.write():写入文件
+
+21、如何实现数组和List之间的转换
+List转数组：ArrayList.toArray(列表)
+数组转List：Arrays.asList(数组)
+
+22、ArrayList和Vector的区别
+Vector是同步的，通过数组实现
+ArrayList是异步的，不会过载，比Vector快，通过数组实现
+
+23、Array和ArrayList有何区别
+Array可以容纳基本类型和对象，指定大小，功能不多
+ArrayList只能容纳对象，初始大小是固定的
+
+24、Queue中poll()和remove()有什么区别
+它两都是从队列中取一个元素，poll失败时会返回空，remove()失败时返回异常
+
+25、哪些集合线程是安全的？
+vector、statck（堆栈类）、hashtable、enumeration（枚举）
+
+26、Iterator怎么使用、有什么特点
+Iterator是迭代器的简单实现，只能单向移动
+①、iterator()要求容器返回一个Iterator。第一次调用Iterator的next()方法时，它返回序列的第一个元素。
+②、使用next()获得序列中的下一个元素
+③、使用hasNext()检查是否还有下一个元素
+④、使用remove()将迭代器返回元素并删除
+
+27、Iterator和ListIterator有什么区别
+Iterator可用来遍历set和List，
+ListIterator只能用来遍历List，它可以向前或向后遍历，还包含其他增、替换等功能
+
+
+
+
+
+
